@@ -68,15 +68,14 @@ def main():
             else:
                 print("CEP deve conter 8 dígitos numéricos.")
 
-        while  True:
+        while True:
             numero = input("Número: ")
             if numero.isdigit() and int(numero) > 0:
                 recrutado["numero"] = int(numero)
                 break
 
         while True:
-            telefone = input(
-                "Digite o telefone do recrutado (apenas números): ")
+            telefone = input("Digite o telefone do recrutado (apenas números): ")
             if telefone.isdigit() and (len(telefone) == 10 or len(telefone) == 11):
                 recrutado["telefone"] = formatar_telefone(telefone)
                 break
@@ -147,8 +146,8 @@ def main():
                         if recrutado["pcd"] in ["s"]:
                             defi = input("Qual? ")
                             recrutado["defi"] = defi
-                            criterios = input(
-                                "Recrutado atende a todos os requisitos? (s/n): ")
+                        criterios = input(
+                            "Recrutado atende a todos os requisitos? (s/n): ")
                         break
                     else:
                         print("Vaga inválida. Tente novamente.")
